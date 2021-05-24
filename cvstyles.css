@@ -15,8 +15,7 @@ h2{
     max-width:50%;
     justify-content: right;
     margin-left: 70%;
-    border: 5px solid #666666;
-    border-radius:5px;
+ 
 }
 
 .navbar-collapse{
@@ -199,13 +198,9 @@ color:black;
   background-color: black;
 }
 
-.btn--secondary{
-  color:black;
-  background-color: white;
-}
 
 .btn:hover, .btn:focus {
-    color: red;
+    color:#666666;
     text-decoration: none;
     cursor: pointer;
 }
@@ -455,6 +450,7 @@ input[type=text], select, textarea {
 
 
 @media only screen and (min-width:720px){
+    
     .navbar{
         min-width: 100%;
         margin:0;
