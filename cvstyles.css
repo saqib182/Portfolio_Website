@@ -2,13 +2,37 @@ body{
     background-color:#E8E8EA;
     font-family:'roboto', sans serif;
     margin: 0%;
+    font-weight:500;
+    background-image: url("background4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2{
+    color:#666666;
+}
+.navbar{
+    max-width:50%;
+    justify-content: right;
+    margin-left: 70%;
+    border: 5px solid #666666;
+    border-radius:5px;
+}
+
+.navbar-collapse{
+    background-color:#BBBBBB;
+    text-align:right;
+    padding-right: 20px;
+    opacity: 1;
+    margin-top: 10px;
 }
 
 
 .home {
 background-image: url("home2.jpg");
-margin:0%;
-height:135vh;
+background-size:cover;
+margin-bottom:0;
+height:100vh;
 background-position: bottom;
 background-size:cover;
 display: flex;
@@ -32,51 +56,163 @@ color:black;
     
 }
 
-.about{
-    background-color: #E8E8EA;
-    height:100vh;
+.about {
+    height:auto;
     line-height: 1.5;
+    color: #999999;
+    padding: 20px;
 }
 
 .about>h2{
     text-align:center;
     text-transform: uppercase;
     font-weight: 700;
-    margin:5%;
+    margin:0;
+    padding:3%;
 }
 
 .timeline{
-    height:125vh;
+    height:auto;
+    background-image: url("background2.jpg");
+    background-position: top;
+    background-size:cover; 
 }
 
 .timeline>h2{
     text-align:center;
     text-transform: uppercase;
     font-weight: 700;
-    margin:5%;
+    padding:5%;
 }
 
 .fulltimeline{
     display:flex;
-    height: 115vh;
+    height: auto;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.timesphere{
-    border: 1px solid black;
+#timesphere{
+    border: 7px solid #333333;
+    background-color: #666666;
+    color: #999999;
+    font-weight: 600;
     border-radius: 50%;
     text-transform: uppercase;
-    width:15vh;
-    height:15vh;
+    width:18vh;
+    height:18vh;
     display:flex;
     justify-content: center;
     align-items: center;
+    margin: 1%;
 }
 
+#timesphere:hover{
+    background-color: #999999;
+    color: #666666;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+#modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 20px 2px 20px 2px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    display: inline-block;
+    text-align: center;
+}
+
+ .modal-header>h2{
+      font-size: 20px;
+      font-weight: bold;
+}
+
+
+  
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+    color: black;
+}
+  
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: white;
+    color: black;
+}
+  
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    bottom:0;
+    left: 1%;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 98%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatebottom;
+    animation-duration: 0.4s
+}
+  
+/* Animation */
+@keyframes animatebottom {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+/*Buttons in the modal*/
+
+.btn__continue {
+  float: bottom;
+  font-size: 15px;
+  font-weight: 900;
+  margin: 0;
+  width:80%;
+  margin: 0.2% 10% 0.2% 10%;
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn--primary{
+  color:white;
+  background-color: black;
+}
+
+.btn--secondary{
+  color:black;
+  background-color: white;
+}
+
+.btn:hover, .btn:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 .skills{
-    height: 125vh;
+    height: auto;
 }
 .skills>h2{
     text-align:center;
@@ -87,33 +223,285 @@ color:black;
 
 .fullskills{
     display:flex;
-    height: 115vh;
+    height: auto;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: space-evenly;   
+    align-items: center;   
     flex-wrap: wrap;
 }
 
 .skill{
     flex-wrap: wrap;
-    border: 1px solid black;
+    border: 7px solid #333333;
+    background-color: #666666;
+    color: #999999;
     border-radius: 50%;
-    margin:10vh;
+    margin:2vh;
     text-transform: uppercase;
     width:15vh;
     height:15vh;
     display:flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
+}
+/*html skill*/
+#html:hover{
+    background-color: green;
+    border-color: darkgreen;
+    color: white;
+    cursor: pointer; 
+}
+#html:hover span{
+    display:none;
+}
+#html:hover::before {
+    content:"90%";
+    font-size: 40px;
+}
+/*css skill*/
+#css:hover{
+    background-color: green;
+    border-color: darkgreen;
+    color: white;
+    cursor: pointer; 
+}
+#css:hover span{
+    display:none;
+}
+#css:hover::before {
+    content:"80%";
+    font-size: 40px;
+}
+/*javascript skill*/
+#javascript:hover{
+    background-color: green;
+    border-color: darkgreen;
+    color: white;
+    cursor: pointer; 
+}
+#javascript:hover span{
+    display:none;
+}
+#javascript:hover::before {
+    content:"80%";
+    font-size: 40px;
+}
+/*python skill*/
+#python:hover{
+    background-color:orange;
+    border-color:darkorange;
+    color: white;
+    cursor: pointer; 
+}
+#python:hover span{
+    display:none;
+}
+#python:hover::before {
+    content:"50%";
+    font-size: 40px;
+}
+/*sql skill*/
+#sql:hover{
+    background-color: orange;
+    border-color:darkorange;
+    color: white;
+    cursor: pointer; 
+}
+#sql:hover span{
+    display:none;
+}
+#sql:hover::before {
+    content:"60%";
+    font-size: 40px;
+}
+/*c++ skill*/
+#cpp:hover{
+    background-color: green;
+    border-color: darkgreen;
+    color: white;
+    cursor: pointer; 
+}
+#cpp:hover span{
+    display:none;
+}
+#cpp:hover::before {
+    content:"70%";
+    font-size: 40px;
 }
 
+
 .projects{
-    height:125vh;
+    height:280vh;
+    background-image: url("background3.jpg");
+    background-size: cover;
 }
 
 .projects>h2{
     text-align:center;
     text-transform: uppercase;
     font-weight: 700;
-    margin:5%;
+    padding-top: 20px;
 }
+
+.allprojects{
+    display:flex;
+    height: 260vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;   
+    flex-wrap: wrap;
+}
+.project{
+    border: 7px solid #333333;
+    background-color: #666666;
+    margin: 1%;
+    color: #999999;
+    font-weight: 600;
+    border-radius: 5%;
+    text-transform: uppercase;
+    width:50vh;
+    height:43vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom: 20px;
+}
+
+.projects>h2{
+    padding-top: 10px;
+    color:#333333;
+}
+
+.project>p{
+    font-size:15px;
+    text-transform: none;
+    color: #333333;
+    padding: 5px;
+    text-align:center;
+}
+
+.footer{
+    height:60vh;
+    background-color: #f2f2f2;
+}
+
+.footer>h2{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-transform:uppercase;
+    color:#333333;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color:#999999;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #666666;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+.links> img{
+    height:50px;
+    width:50px;
+    margin: 20px;
+    text-decoration:none;
+}
+.links{
+    text-decoration: none;
+    height:50px;
+    width:50px;
+}
+
+
+@media only screen and (min-width:400px){
+
+    .skill{
+        width: 18vh;
+        height: 18vh;
+    }
+}
+
+
+@media only screen and (min-width:720px){
+    .navbar{
+        min-width: 100%;
+        margin:0;
+        padding:0;
+        background-color: #BBBBBB;
+        display:flex;
+    }
+    .navbar-collapse{
+        margin: 0;
+        padding:0;
+        width:100%;
+        text-align: center;
+        justify-content: space-evenly;
+
+    }
+    .about{
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .projects{
+        height: auto;
+    }
+    .allprojects{
+        height: auto;
+    }
+    .skill{
+        font-size:36px;
+        margin: 5% 10%;
+    }
+    .modal-content{
+      width:70%;
+      bottom:40%;
+      margin-left:15%;
+      animation-duration:0.7s;
+    }
+    .project{
+        width: 40%;
+        height: 35vh;
+        font-size: 28px;
+    }
+    .project>p{
+        font-size:20px;
+    }
+  
+    @keyframes animatebottom {
+      from {bottom: 40%; opacity: 0}
+      to {bottom: 40%; opacity: 1}
+    }
+  }
